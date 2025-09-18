@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Restaurant Landing</title>
+    <link rel="preload" as="image" href="pexels-robin-stickel-70497.jpg">
+    <link rel="preload" as="image" href="pexels-eva-bronzini-6141651.jpg">
+    <link rel="preload" as="image" href="pexels-rachel-claire-6752433.jpg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav-container">
+            <div class="spacer" aria-hidden="true"></div>
+            <nav class="main-nav" aria-label="Main navigation">
+                <ul id="nav-list" class="nav-list center">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#order">Order</a></li>
+                    <li><a href="#food">Food</a></li>
+                    <li><a href="#restaurant">Restaurant</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+            <button class="nav-toggle icon-only" aria-expanded="false" aria-controls="nav-list" aria-label="Toggle menu">
+                <img src="menu-bar.png" alt="Menu" width="26" height="26">
+            </button>
+        </div>
+    </header>
+
+    <main id="home">
+        <section class="hero">
+            <div class="hero-text">
+                <h1>LOREM IPSUM</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id est vitae dolor rhoncus tristique. Maecenas metus quam, rhoncus euismod lorem in, sollicitudin viverra eros. Donec dictum luctus quam ut tristique. Curabitur nec faucibus purus. Quisque congue sem nec justo mollis, in tincidunt erat pretium. Sed pulvinar, massa ac porta viverra.
+                </p>
+                <a class="btn" href="#order">Click Me</a>
+            </div>
+            <div class="hero-media">
+                <img src="pexels-robin-stickel-70497.jpg" alt="Burger with fries on plate" width="1200" height="800">
+            </div>
+        </section>
+
+        <section class="promo" aria-labelledby="promo-heading">
+            <div class="promo-gallery">
+                <figure class="stack">
+                    <img src="pexels-rachel-claire-6752433.jpg" alt="Neon sign at night" loading="lazy">
+                    <img src="pexels-eva-bronzini-6141651.jpg" alt="Outdoor street cafe" loading="lazy">
+                </figure>
+                <figure class="tall">
+                    <img src="pexels-mister-mister-3434523.jpg" alt="Assorted dishes on table" loading="lazy">
+                </figure>
+            </div>
+            <div class="promo-card">
+                <p class="eyebrow">LOREM IPSUM</p>
+                <h2 id="promo-heading">LOREM IPSUM SET ADEMIR</h2>
+                <a class="link" href="#">Click <img src="icons8-arrow-30.png" alt="Right arrow"></a>
+            </div>
+        </section>
+    </main>
+
+    <script>
+    (function(){
+        const toggle = document.querySelector('.nav-toggle');
+        const list = document.getElementById('nav-list');
+        if(toggle && list){
+            toggle.addEventListener('click', function(){
+                const expanded = this.getAttribute('aria-expanded') === 'true';
+                this.setAttribute('aria-expanded', String(!expanded));
+                list.classList.toggle('open');
+            });
+        }
+    })();
+    </script>
+</body>
+</html>
+
+
